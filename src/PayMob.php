@@ -83,8 +83,7 @@ class PayMob
     {
         // Request body
         $json = [
-            'username' => config('paymob.username'),
-            'password' => config('paymob.password')
+                'api_key' => config('api_key'),
         ];
 
         // Send curl
