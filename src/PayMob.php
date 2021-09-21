@@ -139,6 +139,7 @@ class PayMob
      * @return array
      */
     public function getPaymentKeyPaymob(
+         $integration_id,
           $token,
           $amount_cents,
           $order_id,
@@ -167,7 +168,7 @@ class PayMob
                 'apartment'    => 'null'
             ],
             'currency'            => 'EGP',
-            'card_integration_id' => config('paymob.integration_id')
+            'card_integration_id' =>  $integration_id
         ];
 
         // Send curl
